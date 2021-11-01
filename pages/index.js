@@ -12,7 +12,9 @@ export default function Home() {
       </Head>
 
       <h2>WELCOME NEXT JS CODEVOLUTION</h2>
-      <Link href='/docs'>Docs Route Dynamic</Link>
+      <Link href='/docs'>Docs Route Dynamic</Link><br/>
+      <Link href='/users'>Data Users</Link><br/>
+      <Link href='/post'>Data Post</Link>
     </div>
   )
 }
