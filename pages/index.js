@@ -13,10 +13,12 @@ export default function Home() {
 
       <h2>WELCOME NEXT JS CODEVOLUTION</h2>
       <Link href='/docs'>Docs Route Dynamic</Link><br/>
-      <Link href='/users'>Data Users</Link><br/>
-      <Link href='/post'>Data Post</Link><br/>
-      <Link href='/products'>Data Products</Link><br/>
-      <Link href='/news'>Data News</Link>
+      <Link href='/users'>Data Users - SSG</Link><br/>
+      <Link href='/post'>Data Post - SSG</Link><br/>
+      <Link href='/products'>Data Products - SSG with Revalidate</Link><br/>
+      <Link href='/news'>Data News - SSR</Link><br/>
+      <Link href='/dashboard'>Dashboard - CSR - Private Page - Not SEO</Link><br/>
+      <Link href='/dashboard-swr'>Dashboard With SWR - CSR - Private Page - Not SEO</Link><br/>
     </div>
   )
 }
