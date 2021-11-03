@@ -15,7 +15,8 @@ export default function Home() {
       <Link href='/docs'>Docs Route Dynamic</Link><br/>
       <Link href='/users'>Data Users</Link><br/>
       <Link href='/post'>Data Post</Link><br/>
-      <Link href='/products'>Data Products</Link>
+      <Link href='/products'>Data Products</Link><br/>
+      <Link href='/news'>Data News</Link>
     </div>
   )
 }
