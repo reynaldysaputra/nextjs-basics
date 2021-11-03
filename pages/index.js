@@ -14,7 +14,8 @@ export default function Home() {
       <h2>WELCOME NEXT JS CODEVOLUTION</h2>
       <Link href='/docs'>Docs Route Dynamic</Link><br/>
       <Link href='/users'>Data Users</Link><br/>
-      <Link href='/post'>Data Post</Link>
+      <Link href='/post'>Data Post</Link><br/>
+      <Link href='/products'>Data Products</Link>
     </div>
   )
 }

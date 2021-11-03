@@ -1,4 +1,12 @@
+import { useRouter } from "next/dist/client/router";
+
 export default function DetailPost({posts}){
+  const router = useRouter();
+
+  if(router.isFallback) {
+    return <h2>Loading...</h2>
+  }
+
   return(
     <>
       <h2>{posts.id}. {posts.title}</h2>
@@ -11,7 +19,7 @@ export async function getStaticPaths(){
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   const data = await res.json();
   
-  const paths = data.map((post) => {
+  const paths = data.slice(0,5).map((post) => {
     return {
       params: {
         postId: post.id.toString()
@@ -21,18 +29,24 @@ export async function getStaticPaths(){
 
   return { 
     paths, 
-    fallback: false 
+    fallback: true 
   }
 }
 
 export async function getStaticProps(context){
   const {postId} = context.params;
-  const data = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
-  const res = await data.json();
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+  const data = await res.json();
+  
+  if(!data.id) {
+    return {
+      notFound: true,
+    }
+  }
 
   return {
     props: {
-      posts: res
+      posts: data
     }
   }
 }
