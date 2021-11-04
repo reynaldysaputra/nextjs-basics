@@ -19,6 +19,7 @@ export default function Home() {
       <Link href='/news'>Data News - SSR</Link><br/>
       <Link href='/dashboard'>Dashboard - CSR - Private Page - Not SEO</Link><br/>
       <Link href='/dashboard-swr'>Dashboard With SWR - CSR - Private Page - Not SEO</Link><br/>
+      <Link href='/events'>Events List - SSR + CSR Collaboration</Link><br/>
     </div>
   )
 }
